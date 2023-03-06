@@ -4,23 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e340ced6-2b8c-4908-8243-47957efb7300" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/testing/service/testdrivenservice/controller/CustomerControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/testing/service/testdrivenservice/controller/CustomerControllerTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/testing/service/testdrivenservice/controller/HttpApiTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/testing/service/testdrivenservice/controller/HttpApiTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/data.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/testing/service/testdrivenservice/TestDrivenServiceApplication.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/testing/service/testdrivenservice/controller/CustomerController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/testing/service/testdrivenservice/controller/CustomerExceptionController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/testing/service/testdrivenservice/data/CustomerDataSource.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/testing/service/testdrivenservice/exception/CustomerException.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/testing/service/testdrivenservice/exception/model/CustomerExceptionResponse.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/testing/service/testdrivenservice/model/Customer.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/testing/service/testdrivenservice/repository/CustomerRepository.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/testing/service/testdrivenservice/service/CustomerService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/schema.sql" beforeDir="false" />
-    </list>
+    <list default="true" id="e340ced6-2b8c-4908-8243-47957efb7300" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
