@@ -5,7 +5,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e340ced6-2b8c-4908-8243-47957efb7300" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/testing/service/testdrivenservice/controller/CustomerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/testing/service/testdrivenservice/controller/CustomerController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/testing/service/testdrivenservice/controller/CustomerControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/testing/service/testdrivenservice/controller/CustomerControllerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/testing/service/testdrivenservice/controller/HttpApiTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/testing/service/testdrivenservice/controller/HttpApiTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/data.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/testing/service/testdrivenservice/TestDrivenServiceApplication.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/testing/service/testdrivenservice/controller/CustomerController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/testing/service/testdrivenservice/controller/CustomerExceptionController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/testing/service/testdrivenservice/data/CustomerDataSource.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/testing/service/testdrivenservice/exception/CustomerException.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/testing/service/testdrivenservice/exception/model/CustomerExceptionResponse.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/testing/service/testdrivenservice/model/Customer.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/testing/service/testdrivenservice/repository/CustomerRepository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/testing/service/testdrivenservice/service/CustomerService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/schema.sql" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,6 +36,9 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="JpbToolWindowState">
+    <option name="isToolWindowVisible" value="false" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -51,7 +68,7 @@
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
     "project.structure.last.edited": "Project",
-    "project.structure.proportion": "0.0",
+    "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.0",
     "settings.editor.selected.configurable": "preferences.lookFeel"
   }
@@ -64,7 +81,7 @@
       <recent name="org.testing.service.testdrivenservice.controller" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.TestDrivenServiceApplication">
+  <component name="RunManager" selected="JUnit.CustomerControllerTest.findAll">
     <configuration name="TestDrivenServiceApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="org.testing.service.testdrivenservice.TestDrivenServiceApplication" />
       <module name="test-driven-service" />
@@ -78,7 +95,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="CustomerControllerTest.findByIdTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="CustomerControllerTest.findAll" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="test-driven-service" />
       <extension name="coverage">
         <pattern>
@@ -88,13 +105,13 @@
       </extension>
       <option name="PACKAGE_NAME" value="org.testing.service.testdrivenservice.controller" />
       <option name="MAIN_CLASS_NAME" value="org.testing.service.testdrivenservice.controller.CustomerControllerTest" />
-      <option name="METHOD_NAME" value="findByIdTest" />
+      <option name="METHOD_NAME" value="findAll" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="HttpApiTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="HttpApiTest.createCustomerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="test-driven-service" />
       <extension name="coverage">
         <pattern>
@@ -104,7 +121,24 @@
       </extension>
       <option name="PACKAGE_NAME" value="org.testing.service.testdrivenservice.controller" />
       <option name="MAIN_CLASS_NAME" value="org.testing.service.testdrivenservice.controller.HttpApiTest" />
-      <option name="TEST_OBJECT" value="class" />
+      <option name="METHOD_NAME" value="createCustomerTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="HttpApiTest.findAllTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="test-driven-service" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.testing.service.testdrivenservice.controller.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.testing.service.testdrivenservice.controller" />
+      <option name="MAIN_CLASS_NAME" value="org.testing.service.testdrivenservice.controller.HttpApiTest" />
+      <option name="METHOD_NAME" value="findAllTest" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -127,10 +161,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.TestDrivenServiceApplication" />
-        <item itemvalue="JUnit.CustomerControllerTest.findByIdTest" />
+        <item itemvalue="JUnit.CustomerControllerTest.findAll" />
+        <item itemvalue="JUnit.HttpApiTest.createCustomerTest" />
         <item itemvalue="JUnit.HttpApiTest.findByIdTest" />
-        <item itemvalue="JUnit.HttpApiTest" />
+        <item itemvalue="JUnit.HttpApiTest.findAllTest" />
+        <item itemvalue="Application.TestDrivenServiceApplication" />
       </list>
     </recent_temporary>
   </component>
