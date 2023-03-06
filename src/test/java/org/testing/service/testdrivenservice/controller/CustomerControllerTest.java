@@ -10,6 +10,8 @@ import org.springframework.test.web.servlet.MockMvc;
 import org.testing.service.testdrivenservice.model.Customer;
 import org.testing.service.testdrivenservice.service.CustomerService;
 
+import java.util.Collection;
+import java.util.List;
 import java.util.Optional;
 
 import static org.mockito.ArgumentMatchers.anyInt;
@@ -38,6 +40,19 @@ public class CustomerControllerTest {
                 .andExpect(( jsonPath("address").value("Dagenham")))
                 .andReturn();
     }
+
+
+    @Test
+    public void findAll() throws Exception {
+        List<Customer> findAll = List.of(new Customer(1,"Conroy","Dagenham"),
+                new Customer(2,"Stephen","Luton"),
+                new Customer(3,"Delroy White","Leicester"));
+        when(customerService.findAll()).thenReturn(findAll);
+        mockMvc.perform(get("/customer"))
+                .andDo(print())
+                .andReturn();
+    }
+
 
 
 }

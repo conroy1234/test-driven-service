@@ -2,13 +2,13 @@ package org.testing.service.testdrivenservice.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
+import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 import org.testing.service.testdrivenservice.exception.CustomerException;
 import org.testing.service.testdrivenservice.model.Customer;
 import org.testing.service.testdrivenservice.service.CustomerService;
 
+import java.net.URI;
 import java.util.List;
 import java.util.Optional;
 
@@ -19,17 +19,32 @@ public class CustomerController {
     CustomerService customerService;
 
     @GetMapping("/customer")
-    public ResponseEntity<List<Customer>> findAll(){
-       List<Customer> customers = customerService.findAll();
-       return ResponseEntity.ok(customers);
+    public ResponseEntity<List<Customer>> findAll() {
+        List<Customer> customers = customerService.findAll();
+        return ResponseEntity.ok(customers);
     }
 
     @GetMapping("/customer/{id}")
-    public Optional<Customer> findById(@PathVariable int id){
-      Optional<Customer> customer = customerService.findById(id);
-      if(customer.isEmpty()){
-          throw new CustomerException("customer not found");
-      }
-      return customer;
+    public Optional<Customer> findById(@PathVariable int id) {
+        Optional<Customer> customer = customerService.findById(id);
+        if (customer.isEmpty()) {
+            throw new CustomerException("customer not found");
+        }
+        return customer;
     }
+
+    @PostMapping("/customer")
+    public ResponseEntity<Customer> save(@RequestBody Customer customer) {
+        Customer entity = customerService.save(customer);
+        if (entity.getId() == 0 || entity.getName().isEmpty() || entity.getAddress().isEmpty()) {
+            throw new CustomerException("field cannot be empty " + customer);
+        }
+        URI location = ServletUriComponentsBuilder.fromCurrentRequest()
+                .path("/{id}")
+                .buildAndExpand(entity.getId())
+                .toUri();
+
+        return ResponseEntity.created(location).build();
+    }
+
 }
