@@ -19,27 +19,31 @@ public class CustomerController {
     CustomerService customerService;
 
     @GetMapping("/customer")
-    public ResponseEntity<List<Customer>> findAll(){
-       List<Customer> customers = customerService.findAll();
-       return ResponseEntity.ok(customers);
+    public ResponseEntity<List<Customer>> findAll() {
+        List<Customer> customers = customerService.findAll();
+        return ResponseEntity.ok(customers);
     }
 
     @GetMapping("/customer/{id}")
-    public Optional<Customer> findById(@PathVariable int id){
-      Optional<Customer> customer = customerService.findById(id);
-      if(customer.isEmpty()){
-          throw new CustomerException("customer not found");
-      }
-      return customer;
+    public Optional<Customer> findById(@PathVariable int id) {
+        Optional<Customer> customer = customerService.findById(id);
+        if (customer.isEmpty()) {
+            throw new CustomerException("customer not found");
+        }
+        return customer;
     }
 
     @PostMapping("/customer")
-    public ResponseEntity<Customer> save(@RequestBody Customer customer){
-       Customer customers = customerService.save(customer);
+    public ResponseEntity<Customer> save(@RequestBody Customer customer) {
+        Customer entity = customerService.save(customer);
+        if (entity.getId() == 0 || entity.getName().isEmpty() || entity.getAddress().isEmpty()) {
+            throw new CustomerException("field cannot be empty " + customer);
+        }
         URI location = ServletUriComponentsBuilder.fromCurrentRequest()
                 .path("/{id}")
-                .buildAndExpand(customer.getId())
+                .buildAndExpand(entity.getId())
                 .toUri();
+
         return ResponseEntity.created(location).build();
     }
 
