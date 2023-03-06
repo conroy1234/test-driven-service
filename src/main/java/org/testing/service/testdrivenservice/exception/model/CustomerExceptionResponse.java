@@ -7,7 +7,6 @@ public class CustomerExceptionResponse {
     private String message;
     private String discription;
 
-
     public CustomerExceptionResponse(LocalDateTime timestamp, String message, String discription) {
         this.timestamp = timestamp;
         this.message = message;
