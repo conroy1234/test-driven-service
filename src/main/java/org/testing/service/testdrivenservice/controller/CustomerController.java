@@ -5,6 +5,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
+import org.testing.service.testdrivenservice.exception.CustomerException;
 import org.testing.service.testdrivenservice.model.Customer;
 import org.testing.service.testdrivenservice.service.CustomerService;
 
@@ -25,6 +26,10 @@ public class CustomerController {
 
     @GetMapping("/customer/{id}")
     public Optional<Customer> findById(@PathVariable int id){
-        return customerService.findById(id);
+      Optional<Customer> customer = customerService.findById(id);
+      if(customer.isEmpty()){
+          throw new CustomerException("customer not found");
+      }
+      return customer;
     }
 }
